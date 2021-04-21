@@ -74,6 +74,15 @@ def selection_sort( arr ):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
+    switch_counter = 1
+    while switch_counter > 0:
+        switch_counter = 0
+        for index in range(0, len(arr) - 1):
+            if arr[index] > arr[index + 1]:
+                smaller_num = arr[index + 1]
+                arr[index + 1] = arr[index]
+                arr[index] = smaller_num
+                switch_counter += 1
 
     return arr
 
